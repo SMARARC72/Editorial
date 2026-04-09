@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "parkerjoe-v2-editorial",
   "builds": [
     {
       "src": "package.json",
@@ -11,6 +10,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
