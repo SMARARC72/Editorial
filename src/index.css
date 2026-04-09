@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background-color: #0f0f0f;
+  color: #f5f1e8;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8984e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a961;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(184, 152, 78, 0.3);
+}
+
+/* Editorial line */
+.editorial-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b8984e, transparent);
+}
+
+/* Image reveal animation */
+.img-reveal {
+  clip-path: inset(0 100% 0 0);
+  animation: reveal 1s ease-out forwards;
+}
+
+@keyframes reveal {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Gold accent text */
+.accent-gold {
+  color: #b8984e;
+}
+
+/* Dark overlay gradient */
+.dark-overlay {
+  background: linear-gradient(to top, rgba(15, 15, 15, 0.9) 0%, transparent 100%);
+}
